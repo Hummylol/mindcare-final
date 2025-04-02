@@ -28,6 +28,19 @@ const Journal = () => {
 
           <p className="text-gray-800 dark:text-white"><strong>Date:</strong> October 5, 2023</p>
           <p className="text-gray-800 dark:text-white">Ended the week on a high note! I completed all my tasks and treated myself to a movie night. Looking forward to the weekend!</p>
+
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            Track your thoughts and feelings in a private space. Your journal is just for you.
+          </p>
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            Write about your day, your emotions, or anything that&apos;s on your mind.
+          </p>
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            Your entries are secure and only visible to you. Take time to reflect and grow.
+          </p>
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            Start your journey of self-discovery and emotional awareness today.
+          </p>
         </div>
       </div>
     </div>

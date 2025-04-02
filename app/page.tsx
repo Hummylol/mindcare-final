@@ -8,6 +8,10 @@ import MoodSelector from "@/components/homepagecomps/MoodSelector";
 import Navbar from "@/components/Navbar";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Brain, Heart, MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 const Page = () => {
   const { data: session, status } = useSession();

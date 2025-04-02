@@ -21,6 +21,9 @@ declare module "next-auth" {
       createdAt: string;
     }
   }
+  interface User {
+    createdAt?: string;
+  }
 }
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
