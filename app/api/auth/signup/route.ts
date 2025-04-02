@@ -3,10 +3,17 @@ import bcrypt from "bcryptjs";
 import User from "@/lib/models/User";
 import { connectToDatabase } from "@/lib/mongodb";
 
+interface SignupRequest {
+  name: string;
+  email: string;
+  password: string;
+}
+
 export async function POST(req: Request) {
   try {
     await connectToDatabase();
-    const { name, email, password } = await req.json();
+    const body = await req.json() as SignupRequest;
+    const { name, email, password } = body;
 
     if (!name || !email || !password) {
       return NextResponse.json({ error: "All fields are required" }, { status: 400 });

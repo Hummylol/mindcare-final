@@ -4,10 +4,16 @@ import jwt from "jsonwebtoken";
 import User from "@/lib/models/User"; // Import your Mongoose User model
 import { connectToDatabase } from "@/lib/mongodb";
 
+interface LoginRequest {
+  email: string;
+  password: string;
+}
+
 export async function POST(req: Request) {
   try {
     await connectToDatabase();
-    const { email, password } = await req.json();
+    const body = await req.json() as LoginRequest;
+    const { email, password } = body;
 
     const user = await User.findOne({ email });
     if (!user) return NextResponse.json({ error: "User not found" }, { status: 404 });
